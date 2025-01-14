@@ -77,6 +77,3 @@ Neis, Pascal/Zipf, Alexander (2008). Openrouteservice.org is three times “open
 ## License
 
 This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](https://github.com/johanneshbr7/HEAL_reachability_analysis_isocalors/blob/d32bc3c0791a80cc4a5a3fbbc9ff8477a8c7980c/LICENSE.txt) file for details.
-
-## Contact
-For any questions or feedback, please contact Johannes H. at johanneshuber1@web.de.
