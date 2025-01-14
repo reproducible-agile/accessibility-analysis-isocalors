@@ -1,5 +1,5 @@
 
-# HEAL Reachability Analysis with Isocalors
+# HEAL Accessibility Analysis with Isocalors
 
 ## Introduction
 
@@ -7,7 +7,7 @@ This repository contains the Jupyter notebooks for conducting a reachability ana
 
 This project investigates the effects of heat stress on the accessibility of essential services in Heidelberg. As urban heat waves become more frequent due to climate change, it is increasingly important to understand how heat impacts access to critical services, particularly for vulnerable populations. To address this challenge, the traditional concept of isochrones—commonly used to map accessibility based on travel time—is extended by incorporating heat stress factors. This innovative approach, known as isocalor analysis, is implemented using a heat-sensitive routing tool developed by the [HEAL project](https://heal.openrouteservice.org/#/place/@8.684134483337404,49.40897673906448,12). By applying this method to the city of Heidelberg, the project provides valuable insights into how varying levels of heat stress influence access to essential health and livelihood services, offering guidance for strategies aimed at enhancing urban resilience in a warming climate.
 
-![Affected population under heat stress conditions at noon (13:00 CEST+2) with heat factor 5 and a heat-minute equivalent of 15.](./img/vul_pop_hf5_noon_hmeq15_v2.png)
+![Affected population under heat stress conditions at noon (13:00 CEST+1) with heat sensitivity factor 5 and a heat stress walking distance equivalent of 15.](./img/vul_pop_hf5_noon.png)
 
 The project consists of three main steps:
 1. **Data Collection:** The first step involves collecting data on essential services, such as kindergartens, social facilities for the elderly, and trees, as well as population data and Local Climate Zones (LCZs) for Heidelberg.
