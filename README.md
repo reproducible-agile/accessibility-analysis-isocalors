@@ -8,7 +8,7 @@ This repository contains the Jupyter notebooks for conducting a accessibility an
 ![Affected population under heat stress conditions at noon (13:00 CEST+1) with heat sensitivity factor 5 and a heat stress walking distance equivalent of 15.](./img/vul_pop_hf5_noon.png)
 
 The project consists of three main steps:
-1. **Data Collection:** The first step involves collecting data on essential services, such as kindergartens, social facilities for the elderly, and trees, as well as population data and Local Climate Zones (LCZs) for Heidelberg.
+1. **Data Collection:** The first step involves collecting data on essential services, such as kindergartens, social facilities for the elderly, as well as population data and Local Climate Zones (LCZs) for Heidelberg.
 
 2. **Isocalor Analysis:** The second step calculates isocalors for the essential services using the HEAL-API, which provides heat-sensitive routing based on OpenRouteService. The analysis considers different heat factors, heat-minute equivalents, and times of day to assess the impact of heat stress on accessibility.
 
@@ -21,12 +21,11 @@ The project consists of three main steps:
 To use this project, follow these instructions:
 - Download the Jupyter Notebooks.
 - Due to file storage limits download large files from the following link [largefiles](https://mega.nz/folder/PdhGRI6S#Pkrr0ftXRB1_ui7FRXn_fA). 
-- Download the POI data from [Geofabrik](https://www.geofabrik.de/data/).
 - Download population data from [Zensus 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
 - Download the LCZ map for Heidelberg [here](https://lcz-generator.rub.de/factsheets/42fa3c8077fb21373f4b83cb338957922f8ec58a/42fa3c8077fb21373f4b83cb338957922f8ec58a_factsheet.html).
-- Run the [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) notebook.
+- Run the [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) notebook to download the POI data from openstreetmap via the Overpass API.
 - Enter the HEAL-API URL in [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb).
-- Run the second notebook.
+- Run the [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb) notebook to calculate the isocalors from transport stations in Heidelberg
 - Run [lcz_analysis.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/lcz_analysis.ipynb).
 
 ## Requirements
@@ -48,7 +47,7 @@ To run the notebooks, the following Python packages are required:
 ## Content
 
 1. **Get_POIs:**  
-   The notebook [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) retrieves POIs for kindergartens, social facilities for the elderly, and trees using the [Overpass-API](https://overpass-api.de/) from OpenStreetMap and saves them to respective shapefiles.
+   The notebook [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) retrieves POIs for kindergartens, senior living facilities, transport stops, etc. using the [Overpass-API](https://overpass-api.de/) from OpenStreetMap and saves them to respective geojson files. The manual additions to the senior living facilities from [seniorenheime_hd](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/data/seniorenheime_hd.csv) are integrated into the senior living facilities retrieved from osm. In the end all POIs except the transport stations are stored in one GeoJSON. The transport POIs are stored within a seperate GeoJSON.
 
 2. **Isocalors_POI:**  
    [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Isocalors_POI.ipynb) calculates isocalors for input shapefiles downloaded from [Geofabrik](https://www.geofabrik.de/data/) or with [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) via the [HEAL-API](https://heal.openrouteservice.org/#/place/@8.684134483337404,49.40897673906448,12). Ensure the HEAL-API URL is inserted into the corresponding code block. To obtain the HEAL URL, contact the [HeiGIT team](https://heigit.org/de/kontakt/) or the author of this repository. The HEAL-API is based on [OpenRouteService](https://openrouteservice.org/). The notebook will call the Isocalors from the HEAL-API and perform subsequent calculations. The output will be stored as GeoJSON files. Two histograms and a graph showing the affected population by city quarter will be created.
