@@ -23,6 +23,8 @@ To use this project, follow these instructions:
 - Due to file storage limits download large files from the following link [largefiles](https://mega.nz/folder/PdhGRI6S#Pkrr0ftXRB1_ui7FRXn_fA). 
 - Download population data from [Zensus 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
 - Download the LCZ map for Heidelberg [here](https://lcz-generator.rub.de/factsheets/42fa3c8077fb21373f4b83cb338957922f8ec58a/42fa3c8077fb21373f4b83cb338957922f8ec58a_factsheet.html).
+- Download the city boundaries and the city district boundaries for Heidelberg [here](https://osm-boundaries.com/)
+- Population data, LVZ map and the city boundary files are prepared as well in the [data](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/data/) folder of this repository. 
 - Run the [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) notebook to download the POI data from openstreetmap via the Overpass API.
 - Enter the HEAL-API URL in [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb).
 - Run the [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb) notebook to calculate the isocalors from transport stations in Heidelberg
