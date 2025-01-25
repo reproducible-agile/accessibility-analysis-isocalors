@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This repository contains the Jupyter notebooks for conducting a accessibility analysis under heat stress conditions using isocalors. It is part of a larger project investigating the effects of heat stress on the accessibility of essential services in Heidelberg. As urban heat waves become more frequent due to climate change, it is increasingly important to understand how heat impacts access to critical services, particularly for vulnerable populations. To address this challenge, the traditional concept of isochrones—commonly used to map accessibility based on travel time—is extended by incorporating heat stress factors. This innovative approach, known as isocalor analysis, is implemented using a heat-sensitive routing tool developed by the [HEAL project](https://heal.openrouteservice.org/#/place/@8.684134483337404,49.40897673906448,12). By applying this method to the city of Heidelberg, the project provides valuable insights into how varying levels of heat stress influence access to essential health and livelihood services, offering guidance for strategies aimed at enhancing urban resilience in a warming climate.
+This repository contains the Jupyter notebooks for conducting a accessibility analysis under heat stress conditions using isocalors. It is part of a larger project investigating the effects of heat stress on the accessibility of essential services in Heidelberg. As urban heat waves become more frequent due to climate change, it is increasingly important to understand how heat impacts access to critical services, particularly for vulnerable populations. To address this challenge, the traditional concept of isochrones—commonly used to map accessibility based on travel time—is extended by incorporating heat stress factors. This innovative approach, known as isocalor analysis, is implemented using a heat-sensitive routing tool. By applying this method to the city of Heidelberg, the project provides valuable insights into how varying levels of heat stress influence access to essential health and livelihood services, offering guidance for strategies aimed at enhancing urban resilience in a warming climate.
 
 ![Affected population under heat stress conditions at noon (13:00 CEST+1) with heat sensitivity factor 5 and a heat stress walking distance equivalent of 15.](./img/vul_pop_hf5_noon.png)
 
@@ -19,16 +19,16 @@ The project consists of three main steps:
 ## Usage
 
 To use this project, follow these instructions:
-- Download the Jupyter Notebooks.
-- Due to file storage limits download large files from the following link [largefiles](https://mega.nz/folder/PdhGRI6S#Pkrr0ftXRB1_ui7FRXn_fA). 
-- Download population data from [Zensus 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022).
-- Download the LCZ map for Heidelberg [here](https://lcz-generator.rub.de/factsheets/42fa3c8077fb21373f4b83cb338957922f8ec58a/42fa3c8077fb21373f4b83cb338957922f8ec58a_factsheet.html).
-- Download the city boundaries and the city district boundaries for Heidelberg [here](https://osm-boundaries.com/)
+- Download the project (src,data,img) using the provided file structure
+- Download population data from [Zensus 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022). 
+- Download the LCZ map for Heidelberg [here](https://lcz-generator.rub.de/factsheets/42fa3c8077fb21373f4b83cb338957922f8ec58a/42fa3c8077fb21373f4b83cb338957922f8ec58a_factsheet.html). 
+- Download the city boundaries and the city district boundaries for Heidelberg [here](https://osm-boundaries.com/).
 - Population data, LVZ map and the city boundary files are prepared as well in the [data](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/data/) folder of this repository. 
-- Run the [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) notebook to download the POI data from openstreetmap via the Overpass API.
-- Enter the HEAL-API URL in [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb).
-- Run the [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb) notebook to calculate the isocalors from transport stations in Heidelberg
+- Run the [Get_POIs.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/Get_POIs.ipynb) notebook to download the POI data from openstreetmap via the Overpass API. Beware of storing the [file](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/data/seniorenheime_hd.csv) for manual addition to the senior living facilities in the data folder before running the script.
+- Run the [Isocalors_POI.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/HEAL_Isocalors_POI.ipynb).
 - Run [lcz_analysis.ipynb](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/src/lcz_analysis.ipynb).
+- Open the QGIS project found in the [img folder](https://anonymous.4open.science/r/accessibility-analysis-isocalors-7F2F/img/). 
+- The figures from the paper can be recreated without running the script by downloading the data from the data folder. The already calculated isocalors can be downloaded from this [large file storage](https://mega.nz/folder/PdhGRI6S#Pkrr0ftXRB1_ui7FRXn_fA). 
 
 ## Requirements
 
