@@ -19,7 +19,7 @@ The project consists of three main steps:
 ## Usage
 
 To use this project, follow these instructions:
-- Download the project (src,data,img) using the provided file structure
+- Download the whole repository.
 - Download population data from [Zensus 2022](https://www.zensus2022.de/DE/Ergebnisse-des-Zensus/_inhalt.html#Gitterdaten2022). 
 - Download the LCZ map for Heidelberg [here](https://lcz-generator.rub.de/factsheets/42fa3c8077fb21373f4b83cb338957922f8ec58a/42fa3c8077fb21373f4b83cb338957922f8ec58a_factsheet.html). 
 - Download the city boundaries and the city district boundaries for Heidelberg [here](https://osm-boundaries.com/).
